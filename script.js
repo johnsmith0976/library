@@ -8,7 +8,7 @@ function book(title, author, pages, read) {
         
     }
 }
-const theHobbit = new book('The Hobbit', 'jrr tolkien', '295', 'not read yet');
+const theHobbit = new book('The Hobbit', 'J.R.R. Tolkien', '295', 'Not read yet');
 let library = [];
 let i = 0;
 

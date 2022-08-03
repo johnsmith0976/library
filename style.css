@@ -1,9 +1,112 @@
+body {
+    background-color: #fcc981;
+}
 #form, #form2 {
     display: none;
 } 
-h1 {
-    background-color: pink;
-}
+
 #output {
     border: 1px solid black;
+    margin: auto;
+    padding: 6vh;
+    width: 50vh;
+    line-height: 200%;
+    font-size: 3vh;
+    background-color: #f4f6f0;
+    
+}
+#left, #right {
+    background-color: #7db0a8;
+}
+#flex {
+    display: flex;
+    flex-direction: column;
+}
+#outputcont {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    margin: auto;
+    padding: 3vh;
+    border-radius: 12px;
+    width: 75vh;
+    background-color: #404149;
+    
+}
+.halp {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+#buttons {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    margin-top: 1vh;
+}
+#number {
+    font-size: 2vh;
+    color: white;
+}
+#buttons > button {
+    width: 7vh;
+}
+#form, #form2 {
+    margin: auto;
+    width: 75vh;
+    margin-top: 1vh;
+    
+}
+input {
+    margin-bottom: 1.5vh;
+}
+fieldset {
+    border-radius: 12px;
+    padding: 3vh;
+    background-color: #404149;
+    
+}
+label {
+    color: white;
+    
+}
+legend {
+ font-weight: bold;
+ color: #f4f6f0;
+ background-color:  #404149;
+}
+
+.but {
+    font-size: 100%;
+    width: 15%;
+    background-color: #7db0a8;
+}
+.helpdiv {
+    position: absolute;
+  left: 40%;
+   width: 50vh;
+   border: 1px solid black;
+   padding: 1vh;
+   background-color: white;
+   color: black;
+   display: none;
+   border-radius: 12px;
+}
+.helphover:hover + .helpdiv {
+    display: block;
+}
+button {
+border-radius: 12px;
+border: 1px solid black;
+padding: 10px;
+font-size: 100%;
+}
+#del {
+background-color: #e3735e;
+}
+#new {
+background-color: #da70d6;
+}
+#edit {
+    background-color: #fc8eac;
 }

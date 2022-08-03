@@ -18,15 +18,33 @@
         </style>
 </head>
 <body>
+    <div id="flex">
      <h1>Welcome to your own mini-library!</h1>
+     <div id="help">
     <p>Click through to see your collection of books</p>
-    <span class="material-symbols-outlined">
-help
-</span>
+   
+</div>
+
+<div id="outputcont">
+    <div class="halp"> 
+        <span class="material-symbols-outlined helphover" onmouseover="display()" onmouseout="disply()">
+        help
+        </span>
+  <div class="helpdiv">
+    Help: <br>
+       *Click through the arrow buttons to see your collection of books <br>
+       *The + button adds a new book <br>
+       *Click the Edit icon to change a book's reading status <br>
+       *Click the Trash icon to delete a book <br> 
+    </div>       
+   </div>
     <div id="output">
-        
     </div>
     <div id="number"> 1/1 </div>
+</div>
+
+    <div id="buttons">
+    
     <button id="left"> < </button>
     <button id="right"> > </button>
     <button id="new"> + </button>
@@ -35,7 +53,9 @@ help
         </span></button>
     <button id="del"><span class="material-symbols-outlined">
         delete
-        </span></button>
+        </span></button></div>
+    </div>
+
 
     <div id="form">
     <form method="post" name="bkform">
@@ -43,17 +63,17 @@ help
 <legend>Add a new book to your collection!</legend>
 
 <div>
-<label for="name">Title:</label>
+<label for="name">Title:</label> <br>
 <input type="text" name="name" id="name" value="a">
 </div>
 
 <div>
-<label for="author">author:</label>
+<label for="author">Author:</label> <br>
 <input type="text" name="author" id="author" value="a">
 </div>
 
 <div>
-    <label for="pages">pages:</label>
+    <label for="pages">Pages:</label> <br>
     <input type="number" name="pages" id="pages" value="1">
     </div>
 
@@ -61,30 +81,31 @@ help
         <legend>Reading status:</legend>
         <div>
             
-            <input type="radio" name="read" id="reading" value="currently reading" checked>
+            <input type="radio" name="read" id="reading" value="Currently reading" checked>
             <label for="reading">Currently reading</label>
         </div>
         <div>
-            <input type="radio" name="read" id="readnt" value="have not read">
+            <input type="radio" name="read" id="readnt" value="Have not read">
             <label for="readnt">Have not read</label>
                 
         </div>
         <div>
-            <input type="radio" name="read" id="ready" value="already read">   
+            <input type="radio" name="read" id="ready" value="Already read">   
             <label for="ready">Already read</label>
                     
         </div>
     </div>
+    <button  type="button" id="add" class="but">Add book</button>
 </fieldset>
     </form>
-<button id="add">Add book</button>
+
 
 </div>
 
 <div id="form2">
 <form>
     <fieldset>
-    <legend>Update Your Reading status:</legend>
+    <legend>Update Your Reading Status:</legend>
         <div>
             
             <input type="radio" name="readnew" id="readingnew" value="Reading status: currently reading" checked>
@@ -99,9 +120,11 @@ help
             <input type="radio" name="readnew" id="readynew" value="Reading status: already read">   
             <label for="readynew">Already read</label>
                     
-        </div></fieldset>
+        </div>
+        <button type="button" id="update" class="but">Update</button>
+    </fieldset>
 </form>
-<button id="update">Update</button>
+
 </div>
 </body><script src="script.js">
     </script>
