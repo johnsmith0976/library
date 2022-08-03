@@ -1,0 +1,9 @@
+#form, #form2 {
+    display: none;
+} 
+h1 {
+    background-color: pink;
+}
+#output {
+    border: 1px solid black;
+}
