@@ -1,4 +1,12 @@
-function book(title, author, pages, read) {
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = `Your book: ${title}`
+        this.author = `By: ${author}`
+        this.pages = `Pages: ${pages}`
+        this.read = ` Reading status: ${read}`
+    }
+}
+/* function book(title, author, pages, read) {
             
     this.title = `Your book: ${title}`
     this.author = `By: ${author}`
@@ -8,7 +16,8 @@ function book(title, author, pages, read) {
         
     }
 }
-const theHobbit = new book('The Hobbit', 'J.R.R. Tolkien', '295', 'Not read yet');
+*/
+const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', '295', 'Not read yet');
 let library = [];
 let i = 0;
 
@@ -61,7 +70,7 @@ ${library[0].read}`;
 addbtn.addEventListener('click', addbook);
 function addbook() {
 let read = document.querySelector('input[name=read]:checked');
-const boek = new book(title.value, author.value, pages.value, read.value);
+const boek = new Book(title.value, author.value, pages.value, read.value);
 if (library.length < 1) {
     --i;
 }
@@ -78,10 +87,10 @@ update.addEventListener('click', newval)
 function newval() {
     let red = document.querySelector('input[name=readnew]:checked');
     library[i].read = red.value
-    output.innerHTML = `${library[0].title} <br> 
-    ${library[0].author}  <br>
-    ${library[0].pages}  <br>
-    ${library[0].read}`;
+    output.innerHTML = `${library[i].title} <br> 
+    ${library[i].author}  <br>
+    ${library[i].pages}  <br>
+    ${library[i].read}`;
     formt.style.display = 'none';
 }
 if (i < 1) {
